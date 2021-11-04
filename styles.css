@@ -1,3 +1,6 @@
+:root {
+    --footer-color: rgba(0, 0, 0, 0.6);
+}
 *,
 *::before,
 *::after {
@@ -15,4 +18,47 @@
     background-image: url("images/illustration.png");
     background-position: center center;
     background-size: cover;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-container {
+    width: 400px;
+    height: 310px;
+    background-color: white;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    padding-top: 2px;
+    width: 100vw;
+    height: 25.5px;
+    color: white;
+    font-size: 0.65rem;
+    background-color:  var(--footer-color);
+}
+
+.footer__options {
+    display: flex;
+    gap: 3.5px;
+    margin-right: 9px;
+    marign-bottom: 10px;
+}
+
+.circle {
+    width: 2.5px;
+    height: 2.5px;
+    background-color: white;
+    border-radius: 100%;
 }
