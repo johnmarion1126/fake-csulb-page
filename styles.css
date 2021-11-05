@@ -67,6 +67,16 @@ body {
 
 .link {
     color: blue;
+    text-decoration: none;
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-footer {
+    color: white;
 }
 
 .sign-in__form__btns {
@@ -89,6 +99,11 @@ body {
 .sign-in__form__btn:nth-child(2) {
     background-color: #0067B8;
     color: white;
+}
+
+.sign-in__form__btn:hover {
+    cursor: pointer;
+    filter: brightness(90%);
 }
 
 .sign-in__form p {
@@ -116,6 +131,11 @@ body {
     width: 100%;
     height: 8.5%;
     background-color: white;
+}
+
+.sign-in__options:hover {
+    filter: brightness(90%);
+    cursor: pointer;
 }
 
 .sign-in__options__img {
@@ -147,6 +167,10 @@ body {
     display: flex;
     gap: 3.5px;
     margin-right: 9px;
+}
+
+.footer__options:hover {
+    cursor: pointer;
 }
 
 .circle {
