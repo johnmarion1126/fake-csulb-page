@@ -28,10 +28,104 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.login-container {
+.sign-in {
     width: 400px;
-    height: 310px;
+    height: 500px;
+}
+
+.sign-in__form {
+    position: relative;
+    margin-bottom: 19px;
+    padding: 40px;
+    width: 100%;
+    height: 83%;
     background-color: white;
+}
+
+.sign-in__form__logo {
+    margin-bottom: 10px;
+    height: 33px;
+}
+
+.sign-in__form__title {
+    opacity: 0.95;
+    font-size: bolder;
+    font-size: 1.5rem;
+}
+
+#username {
+    padding: 5px 0;
+    margin: 11px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid blue;
+}
+
+#username:focus {
+    outline-width: 0;
+}
+
+.link {
+    color: blue;
+}
+
+.sign-in__form__btns {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.sign-in__form__btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+
+.sign-in__form__btn:nth-child(1) {
+    background-color: #cccccc;
+}
+
+.sign-in__form__btn:nth-child(2) {
+    background-color: #0067B8;
+    color: white;
+}
+
+.sign-in__form p {
+    line-height: 30px;
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.sign-in__form__help {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px 40px;
+    width: 100%;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    line-height: 19px;
+    background-color: #f2f2f2;
+}
+
+.sign-in__options {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    width: 100%;
+    height: 8.5%;
+    background-color: white;
+}
+
+.sign-in__options__img {
+    height: 30px;
+}
+
+.sign-in__options__text {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .footer-container {
@@ -41,11 +135,11 @@ body {
     justify-content: right;
     align-items: center;
     gap: 20px;
-    padding-top: 2px;
+    padding-top: 1.5px;
     width: 100vw;
     height: 25.5px;
     color: white;
-    font-size: 0.65rem;
+    font-size: 0.66rem;
     background-color:  var(--footer-color);
 }
 
@@ -53,7 +147,6 @@ body {
     display: flex;
     gap: 3.5px;
     margin-right: 9px;
-    marign-bottom: 10px;
 }
 
 .circle {
