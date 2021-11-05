@@ -179,3 +179,21 @@ body {
     background-color: white;
     border-radius: 100%;
 }
+
+.screen-transition {
+    position: absolute;
+    top: 0;
+    background-color: gray;
+    width: 100vw;
+    height: 96vh;
+    animation: fadeOut forwards ease-in 0.4s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
