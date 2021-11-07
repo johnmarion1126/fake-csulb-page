@@ -42,7 +42,7 @@ body {
     overflow: hidden;
 }
 
-.screen-1 {
+.screen {
     position: absolute;
     left: 500px;
     padding: 40px;
@@ -110,13 +110,10 @@ body {
     width: 100px;
     height: 30px;
     border: none;
-}
-
-.sign-in__form__btn:nth-child(1) {
     background-color: #cccccc;
 }
 
-.sign-in__form__btn:nth-child(2) {
+.submit-btn {
     background-color: #0067B8;
     color: white;
 }
@@ -216,4 +213,27 @@ body {
     100% {
         opacity: 0;
     }
+}
+
+.return-username {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/*TODO: Add javascript code to transition between screens and collect sign in info*/
+
+/*TESTING SECOND SCREEN*/
+.sign-in__options {
+    display: none;
+}
+
+.screen-2 {
+    left: 0;
+}
+
+.screen-2 {
+    display: none;
 }
