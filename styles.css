@@ -50,17 +50,6 @@ body {
     z-index: 1;
     width: 100%;
     height: 100%;
-    animation: transitionLeft forwards ease-out 0.3s;
-    animation-delay: 0.2s;
-}
-
-@keyframes transitionLeft {
-    0% {
-        left: 500px;
-    }
-    100% {
-        left: 0;
-    }
 }
 
 .sign-in__form__logo {
@@ -224,17 +213,38 @@ body {
     opacity: 0.9;
 }
 
-/*TODO: Add javascript code to transition between screens and collect sign in info*/
-
-/*TESTING SECOND SCREEN*/
-.sign-in__options {
-    display: none;
+.moveInScreen {
+    animation: transitionLeft forwards ease-out 0.3s;
+    animation-delay: 0.2s;
 }
 
-.screen-2 {
+@keyframes transitionLeft {
+    0% {
+        opacity: 0;
+        left: 500px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.moveOffScreen {
     left: 0;
+    animation: moveOffScreen forwards ease-in 0.3s;
+    animation-delay: 0.2s;
 }
 
-.screen-2 {
+@keyframes moveOffScreen {
+    0% {
+        opacity: 1;
+        left: 0;
+    }
+    100% {
+        opacity: 0;
+        left: -400px;
+    }
+}
+.remove {
     display: none;
 }
