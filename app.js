@@ -4,6 +4,7 @@ const screen1 = document.querySelector(".screen-1");
 const screen2 = document.querySelector(".screen-2");
 const userNameForm = document.querySelector("#username");
 const passWordForm = document.querySelector("#password");
+const userNameHeader = document.querySelector(".return-username");
 
 let username;
 let password;
@@ -17,6 +18,9 @@ nextBtn.addEventListener('click', (event) => {
         screen2.classList.add("moveInScreen");
     }, 250);
     username = userNameForm.value;
+
+    const text = document.createTextNode(username);
+    userNameHeader.appendChild(text);
 });
 
 signInBtn.addEventListener('click', (event) => {
