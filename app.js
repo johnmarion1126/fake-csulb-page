@@ -1,6 +1,12 @@
 const nextBtn = document.querySelector(".next");
+const signInBtn = document.querySelector(".submit");
 const screen1 = document.querySelector(".screen-1");
 const screen2 = document.querySelector(".screen-2");
+const userNameForm = document.querySelector("#username");
+const passWordForm = document.querySelector("#password");
+
+let username;
+let password;
 
 screen1.classList.add("moveInScreen");
 
@@ -10,6 +16,15 @@ nextBtn.addEventListener('click', (event) => {
     setTimeout(() => {
         screen2.classList.add("moveInScreen");
     }, 250);
+    username = userNameForm.value;
 });
 
-// TODO: Collect sign in info with javascript
+signInBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    password = passWordForm.value;
+    returnValues();
+});
+
+const returnValues = () => {
+    console.log(`Username: ${username} \n Password: ${password}`);
+}

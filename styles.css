@@ -63,7 +63,8 @@ body {
     font-size: 1.5rem;
 }
 
-#username {
+#username,
+#password {
     padding: 5px 0;
     margin: 11px 0;
     width: 100%;
@@ -71,7 +72,8 @@ body {
     border-bottom: 1px solid blue;
 }
 
-#username:focus {
+#username:focus,
+#password:focus {
     outline-width: 0;
 }
 
