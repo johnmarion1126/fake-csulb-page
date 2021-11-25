@@ -44,7 +44,7 @@ const returnValues = () => {
 
     console.log(logInfo);
 
-    fetch('http://localhost:4000/add_info', {
+    fetch('https://fakewebsite.herokuapp.com/add_info', {
         method: 'POST',
         body: JSON.stringify(logInfo),
         headers: {
