@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import router from './routes/LogInfoRoutes.js';
 
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
