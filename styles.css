@@ -250,3 +250,12 @@ body {
 .remove {
     display: none;
 }
+
+.link-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
