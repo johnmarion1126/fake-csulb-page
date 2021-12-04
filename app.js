@@ -49,7 +49,7 @@ const returnValues = () => {
 
 const transitionToPassword = () => {
     screen1.classList.add("moveOffScreen");
-    setTimeout(() => i{
+    setTimeout(() => {
         screen2.classList.add("moveInScreen");
         signInOptions.classList.add("remove");
     }, 250);
